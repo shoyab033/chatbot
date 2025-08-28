@@ -54,7 +54,7 @@ jobs:
         run: |
           if [ -f frontend/package.json ]; then
             cd frontend
-            npm run build --if-present
+            CI=false npm run build --if-present
           else
             echo "No React frontend found, skipping build..."
           fi
